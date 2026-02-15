@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass {
+    background-color: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    backdrop-filter: blur(10px); /* blur behind */
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-hero-two {
+    background-image: url("./images/bg-2.gif");
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-hero-three {
+    background-image: url("./images/contact.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.animate-progress {
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+summary {
+  list-style: none; /* removes arrow in Firefox */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* removes arrow in Chrome, Safari */
+}
+
+footer img {
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
